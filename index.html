@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL 2026 Ticket Booking</title>
+</head>
+<body>
+
+<header>
+    <h1>IPL 2026 Ticket Booking</h1>
+    <link rel="stylesheet" href="style.css">
+    <nav>
+        <a href="#matches">Matches</a> |
+        <a href="#booking">Book Ticket</a> |
+        <a href="#mybookings">My Bookings</a> |
+        <a href="#guidelines">Guidelines</a>
+    </nav>
+</header>
+
+<section>
+    <h1>Experience The Stadium Energy Live!</h1>
+    <p>Watch your favourite IPL teams live in action.</p>
+    <a href="#matches"><button>View Schedule</button></a>
+    <a href="#booking"><button>Book Ticket</button></a>
+</section>
+
+<section>
+    <h2>About IPL 2026</h2>
+    <h3>Popular Teams</h3>
+    <ul>
+        <li>Royal Challengers Bengaluru</li>
+        <li>Chennai Super Kings</li>
+        <li>Mumbai Indians</li>
+        <li>Kolkata Knight Riders</li>
+        <li>Sunrisers Hyderabad</li>
+    </ul>
+
+
+<h3>Major Match Venues</h3>
+<ul>
+    <li>M. Chinnaswamy Stadium, Bengaluru</li>
+    <li>Wankhede Stadium, Mumbai</li>
+    <li>MA Chidambaram Stadium, Chennai</li>
+    <li>Eden Gardens, Kolkata</li>
+</ul>
+
+
+</section>
+
+<section id="matches">
+    <h2>Match Schedule</h2>
+
+
+<label>Filter by Team:</label>
+<select>
+    <option>All Teams</option>
+    <option>RCB</option>
+    <option>CSK</option>
+    <option>MI</option>
+    <option>KKR</option>
+</select>
+
+<table border="1">
+    <tr>
+        <th>Match Number</th>
+        <th>Teams</th>
+        <th>Date & Time</th>
+        <th>Venue</th>
+        <th>General</th>
+        <th>Premium</th>
+        <th>VIP</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>RCB vs CSK</td>
+        <td>01-04-2026, 7:30 PM</td>
+        <td>Bengaluru</td>
+        <td>1000</td>
+        <td>2500</td>
+        <td>5000</td>
+        <td><a href="#booking">Book</a></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>MI vs KKR</td>
+        <td>03-04-2026, 7:30 PM</td>
+        <td>Mumbai</td>
+        <td>1200</td>
+        <td>3000</td>
+        <td>6000</td>
+        <td><a href="#booking">Book</a></td>
+    </tr>
+</table>
+
+
+</section>
+
+<section id="booking">
+    <h2>Ticket Booking Form</h2>
+
+
+<form>
+    <label>Match:</label>
+    <select>
+        <option>RCB vs CSK</option>
+        <option>MI vs KKR</option>
+    </select>
+    <br><br>
+
+    <label>Stand Category:</label>
+    <select>
+        <option>General</option>
+        <option>Premium</option>
+        <option>VIP</option>
+    </select>
+    <br><br>
+
+    <label>Number of Tickets:</label>
+    <input type="number" min="1">
+    <br><br>
+
+    <label>Name:</label>
+    <input type="text" placeholder="Enter your name">
+    <br><br>
+
+    <label>Email:</label>
+    <input type="email" placeholder="Enter your email">
+    <br><br>
+
+    <label>Phone Number:</label>
+    <input type="tel" placeholder="Enter phone number">
+    <br><br>
+
+    <button type="submit">Confirm Booking</button>
+</form>
+
+<h3>Booking Summary</h3>
+<p>Selected Match: RCB vs CSK</p>
+<p>Stand: General</p>
+<p>Ticket Price: ₹1000</p>
+<p>Quantity: 1</p>
+<p>Total Amount: ₹1000</p>
+
+
+</section>
+
+<section id="mybookings">
+    <h2>My Ticket Bookings</h2>
+    <table border="1">
+        <tr>
+            <th>Match</th>
+            <th>Stand</th>
+            <th>Tickets</th>
+            <th>Total Amount</th>
+        </tr>
+    </table>
+</section>
+
+<section id="guidelines">
+    <h2>Guidelines</h2>
+
+
+<h3>Ticket Verification</h3>
+<p>Carry your valid ticket for entry into the stadium.</p>
+
+<h3>ID Proof Requirement</h3>
+<p>Bring a valid government-issued ID proof.</p>
+
+<h3>Prohibited Items</h3>
+<p>Weapons, outside food and dangerous objects are not allowed.</p>
+
+
+</section>
+
+<footer>
+    <p>© 2026 IPL Ticket Booking Website. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
