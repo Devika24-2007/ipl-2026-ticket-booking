@@ -1,0 +1,91 @@
+:root {
+    --primary: #0b1f4d;
+    --accent: #f5b400;
+    --background: #f4f6fa;
+    --text: #222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+nav {
+    background: var(--primary);
+    padding: 18px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+h1, h2 {
+    text-align: center;
+    padding: 15px;
+}
+
+button {
+    background: var(--accent);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: var(--primary);
+    color: white;
+}
+
+form {
+    background: white;
+    padding: 25px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ccc;
+}
+
+input, select {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
