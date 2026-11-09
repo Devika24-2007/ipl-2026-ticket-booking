@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IPL Ticket Booking</title>
+</head>
+
+<body>
+
+    <h1>IPL Ticket Booking Form</h1>
+
+    <form action="#" method="get">
+
+        <!-- Name -->
+        <label>Name:</label>
+        <input type="text" name="name"
+        placeholder="Enter your name"
+        minlength="3" maxlength="30" required>
+        <br><br>
+
+        <!-- Email -->
+        <label>Email:</label>
+        <input type="email" name="email"
+        placeholder="Enter your email"
+        required>
+        <br><br>
+
+        <!-- Phone -->
+        <label>Phone Number:</label>
+        <input type="tel" name="phone"
+        placeholder="Enter 10 digit number"
+        pattern="[0-9]{10}"
+        required>
+        <br><br>
+
+        <!-- Match Selection -->
+        <label>Select Match:</label>
+
+        <select name="match" required>
+            <option value="">Choose a match</option>
+            <option>RCB vs CSK</option>
+            <option>MI vs KKR</option>
+            <option>RCB vs MI</option>
+            <option>CSK vs KKR</option>
+        </select>
+        <br><br>
+
+        <!-- Stand Category -->
+        <label>Stand Category:</label>
+
+        <select name="stand" required>
+            <option value="">Choose a stand</option>
+            <option>General Stand</option>
+            <option>Premium Stand</option>
+            <option>VIP Stand</option>
+        </select>
+        <br><br>
+
+        <!-- Number of Tickets -->
+        <label>Number of Tickets:</label>
+
+        <input type="number" name="tickets"
+        min="1" max="10" required>
+        <br><br>
+
+        <!-- Additional Preference -->
+        <label>Food Preference:</label>
+        <br>
+
+        <input type="radio" name="food" value="Veg">
+        Veg
+
+        <input type="radio" name="food" value="Non-Veg">
+        Non-Veg
+
+        <br><br>
+
+        <!-- Buttons -->
+        <input type="submit" value="Book Tickets">
+
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
