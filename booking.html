@@ -35,7 +35,7 @@
         <!-- Match Selection -->
         <label>Select Match:</label>
 
-        <select name="match" required>
+        <select name="match" id="match" required>
             <option value="">Choose a match</option>
             <option>RCB vs CSK</option>
             <option>MI vs KKR</option>
@@ -47,7 +47,7 @@
         <!-- Stand Category -->
         <label>Stand Category:</label>
 
-        <select name="stand" required>
+        <select name="stand" id="stand" required>
             <option value="">Choose a stand</option>
             <option>General Stand</option>
             <option>Premium Stand</option>
@@ -58,8 +58,8 @@
         <!-- Number of Tickets -->
         <label>Number of Tickets:</label>
 
-        <input type="number" name="tickets"
-        min="1" max="10" required>
+        <input type="number" id="quantity" name="tickets"
+         min="1" max="10" value="1" required>
         <br><br>
 
         <!-- Additional Preference -->
@@ -80,6 +80,20 @@
         <input type="reset" value="Reset">
 
     </form>
+    <!-- Booking Summary Card -->
+<div class="summary-card">
+
+    <h2>Booking Summary</h2>
+
+    <p>Match: <span id="summaryMatch">Not selected</span></p>
+
+    <p>Stand: <span id="summaryStand">Not selected</span></p>
+
+    <p>Tickets: <span id="summaryQuantity">1</span></p>
+
+    <h3>Total Price: ₹<span id="totalPrice">0</span></h3>
+
+</div>
 
 <script src="app.js"></script>
 </body>

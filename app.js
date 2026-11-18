@@ -51,3 +51,50 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// Activity 7: Booking Summary
+
+const matchSelect = document.getElementById("match");
+const standSelect = document.getElementById("stand");
+const quantityInput = document.getElementById("quantity");
+
+const summaryMatch = document.getElementById("summaryMatch");
+const summaryStand = document.getElementById("summaryStand");
+const summaryQuantity = document.getElementById("summaryQuantity");
+const totalPrice = document.getElementById("totalPrice");
+
+// Ticket prices
+const standPrices = {
+    "General Stand": 1000,
+    "Premium Stand": 3000,
+    "VIP Stand": 5000
+};
+
+// Update summary
+function updateSummary() {
+
+    const match = matchSelect.value;
+    const stand = standSelect.value;
+    const quantity = Number(quantityInput.value);
+
+    const price = standPrices[stand] || 0;
+
+    const total = price * quantity;
+
+    summaryMatch.textContent = match || "Not selected";
+
+    summaryStand.textContent = stand || "Not selected";
+
+    summaryQuantity.textContent = quantity;
+
+    totalPrice.textContent = total;
+
+    showToast("Booking Summary Updated!");
+}
+
+// Listen for user selections
+matchSelect.addEventListener("change", updateSummary);
+
+standSelect.addEventListener("change", updateSummary);
+
+quantityInput.addEventListener("change", updateSummary);
