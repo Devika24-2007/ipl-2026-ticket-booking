@@ -4,6 +4,7 @@
 <head>
     <title>IPL Ticket Booking</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -13,12 +14,19 @@
 
 <a href="booking.html">Book IPL Tickets</a>
 
-<nav>
-    <a href="#matches">Matches</a> |
-    <a href="#booking">Book Ticket</a> |
-    <a href="#mybookings">My Bookings</a> |
-    <a href="#guidelines">Guidelines</a>
+<nav class="navbar">
+    <div class="logo">IPL 2026</div>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#matches">Matches</a>
+        <a href="#booking">Book Ticket</a>
+        <a href="#mybookings">My Bookings</a>
+        <a href="#guidelines">Guidelines</a>
+    </div>
 </nav>
+
 
 <hr>
 <section class="hero">
@@ -58,55 +66,47 @@
 
 <hr>
 
+
+
+
 <h2 id="matches">Match Schedule</h2>
 
 <label>Filter by Team:</label>
-<select>
-    <option>All Teams</option>
-    <option>RCB</option>
-    <option>CSK</option>
-    <option>MI</option>
-    <option>KKR</option>
+
+<select id="teamFilter">
+    <option value="all">All Teams</option>
+    <option value="RCB">RCB</option>
+    <option value="CSK">CSK</option>
+    <option value="MI">MI</option>
+    <option value="KKR">KKR</option>
 </select>
 
-<table border="1" cellpadding="10">
-    <tr>
-        <th>Match Number</th>
-        <th>Teams</th>
-        <th>Date & Time</th>
-        <th>Venue</th>
-        <th>General</th>
-        <th>Premium</th>
-        <th>VIP</th>
-        <th>Action</th>
-    </tr>
+<button id="gridBtn">Grid View</button>
+<button id="listBtn">List View</button>
 
-    <tr>
-        <td>1</td>
-        <td>RCB vs CSK</td>
-        <td>01-04-2026, 7:30 PM</td>
-        <td>Bengaluru</td>
-        <td>1000</td>
-        <td>2500</td>
-        <td>5000</td>
-        <td><a href="#booking">Book</a></td>
-    </tr>
+<div class="match-container" id="matchContainer">
 
-    <tr>
-        <td>2</td>
-        <td>MI vs KKR</td>
-        <td>03-04-2026, 7:30 PM</td>
-        <td>Mumbai</td>
-        <td>1200</td>
-        <td>3000</td>
-        <td>6000</td>
-        <td><a href="#booking">Book</a></td>
-    </tr>
-</table>
+    <div class="match-card" data-teams="RCB CSK">
+        <h3>Match 1: RCB vs CSK</h3>
+        <p>Date: 01-04-2026, 7:30 PM</p>
+        <p>Venue: Bengaluru</p>
+        <p>General: ₹1000</p>
+        <p>Premium: ₹2500</p>
+        <p>VIP: ₹5000</p>
+        <a href="#booking">Book Tickets</a>
+    </div>
 
-<hr>
+    <div class="match-card" data-teams="MI KKR">
+        <h3>Match 2: MI vs KKR</h3>
+        <p>Date: 03-04-2026, 7:30 PM</p>
+        <p>Venue: Mumbai</p>
+        <p>General: ₹1200</p>
+        <p>Premium: ₹3000</p>
+        <p>VIP: ₹6000</p>
+        <a href="#booking">Book Tickets</a>
+    </div>
 
-<h2 id="booking">Ticket Booking Form</h2>
+</div>
 
 <form>
     <label>Match:</label>

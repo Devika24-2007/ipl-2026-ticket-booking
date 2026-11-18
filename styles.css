@@ -15,40 +15,120 @@ body {
     font-family: Arial, sans-serif;
     background: var(--background);
     color: var(--text);
+    padding-top: 75px;
 }
 
-nav {
+/* Navigation using Flexbox */
+.navbar {
     background: var(--primary);
     padding: 18px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav a {
+.logo {
+    color: var(--accent);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
     color: white;
     text-decoration: none;
-    margin: 15px;
 }
 
-nav a:hover {
+.navbar a:hover {
     color: var(--accent);
 }
 
+.menu-toggle {
+    display: none;
+}
+
+/* Headings */
 h1, h2 {
     text-align: center;
     padding: 15px;
 }
 
+/* Hero section */
+.hero {
+    background: linear-gradient(135deg, #0b1f4d, #234b8b);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero a {
+    display: inline-block;
+    background: var(--accent);
+    color: #222;
+    padding: 12px 20px;
+    margin: 15px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* Buttons */
 button {
     background: var(--accent);
     padding: 12px 25px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    margin: 8px;
 }
 
+/* Match cards using CSS Grid */
+.match-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.match-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ccc;
+}
+
+.match-card h3 {
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.match-card p {
+    margin: 10px 0;
+}
+
+.match-card a {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* List view */
+.match-container.list-view {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tables */
 table {
     width: 90%;
     margin: 20px auto;
@@ -67,6 +147,7 @@ th {
     color: white;
 }
 
+/* Forms */
 form {
     background: white;
     padding: 25px;
@@ -83,9 +164,58 @@ input, select {
     border-radius: 5px;
 }
 
+/* Guidelines */
+#guidelines {
+    text-align: center;
+}
+
+#guidelines + h3,
+#guidelines + h3 + p {
+    text-align: center;
+    padding: 8px;
+}
+
+/* Footer */
 footer {
     background: var(--primary);
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+/* Tablet layout */
+@media (max-width: 900px) {
+    .match-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .match-container {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        width: 95%;
+    }
 }
